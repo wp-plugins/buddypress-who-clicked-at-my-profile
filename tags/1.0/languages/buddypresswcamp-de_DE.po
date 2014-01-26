@@ -1,0 +1,51 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Buddypress Who Clicked At My Profile\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-01-26 11:10+0100\n"
+"PO-Revision-Date: 2014-01-26 11:15+0100\n"
+"Last-Translator: Florian Schießl <florian.schiessl@ifs-net.de>\n"
+"Language-Team: Florian Schießl <florian.schiessl@ifs-net.de>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#: buddypress-who-clicked-at-my-profile.php:75
+msgid "Show visitors of my buddypress profile page"
+msgstr "Zeige Besucher meines Profils an"
+
+#: buddypress-who-clicked-at-my-profile.php:76
+msgid "Show bp profile visitors"
+msgstr "Besucher meines Profils"
+
+#: buddypress-who-clicked-at-my-profile.php:99
+msgid ""
+"Your profile has not been visited yet by another member of the community."
+msgstr ""
+"Dein Profil wurde derzeit von keinem anderen Mitglied der Community besucht. "
+"Werde aktiv in der Community und mache so andere auf Dich aufmerksam!"
+
+#: buddypress-who-clicked-at-my-profile.php:106
+msgid "Your profile has been visited by:"
+msgstr "Dein Profil wurde zuletzt besucht von:"
+
+#: buddypress-who-clicked-at-my-profile.php:109
+msgid "Please log in to view the visitors of your profile"
+msgstr ""
+"Willst Du sehen, wer Dein Profil zuletzt besucht hat? Logge dich dazu "
+"einfach ein!"
+
+#: buddypress-who-clicked-at-my-profile.php:130
+msgid "Last visitors of your profile"
+msgstr "Letzte Besucher deines Profils"
+
+#: buddypress-who-clicked-at-my-profile.php:134
+msgid "Title"
+msgstr "Titel"
