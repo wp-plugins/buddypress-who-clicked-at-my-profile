@@ -1,0 +1,47 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-01-26 11:10+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: buddypress-who-clicked-at-my-profile.php:75
+msgid "Show visitors of my buddypress profile page"
+msgstr ""
+
+#: buddypress-who-clicked-at-my-profile.php:76
+msgid "Show bp profile visitors"
+msgstr ""
+
+#: buddypress-who-clicked-at-my-profile.php:99
+msgid ""
+"Your profile has not been visited yet by another member of the community."
+msgstr ""
+
+#: buddypress-who-clicked-at-my-profile.php:106
+msgid "Your profile has been visited by:"
+msgstr ""
+
+#: buddypress-who-clicked-at-my-profile.php:109
+msgid "Please log in to view the visitors of your profile"
+msgstr ""
+
+#: buddypress-who-clicked-at-my-profile.php:130
+msgid "Last visitors of your profile"
+msgstr ""
+
+#: buddypress-who-clicked-at-my-profile.php:134
+msgid "Title"
+msgstr ""

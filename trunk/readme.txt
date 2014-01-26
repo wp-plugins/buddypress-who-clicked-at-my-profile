@@ -1,0 +1,35 @@
+=== Buddypress Who clicked at my Profile? === 
+Contributors: Florian Schießl
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=NX8D8HYLP9HYS
+Tags: buddypress, profile, social network
+Requires at least: 3.0
+Tested up to: 3.8
+Stable Tag: trunk
+License: GPLv2
+License URI: http://www.opensource.org/licenses/GPL-2.0
+
+This plugin will provide a widget that shows last profile visitors for the logged in user.
+
+== Description ==
+
+This plugin will provide a widget that shows last profile visitors for the logged in user.
+
+This will only work with standard buddypress profile.
+
+Install, activate, and it will work.
+
+== Installation ==
+
+1. Upload the files to the `/wp-content/plugins/buddypress-who-clicked-at-my-profile/` directory or install through WordPress directly.
+1. Activate the plugin through the 'Plugins' menu in WordPress
+
+== Frequently Asked Questions ==
+
+= The last Visitors are only showed as text links =
+
+That's correct and the way it should work. You like avatars more? Please modify the code of the widet as yu need it!
+
+== Changelog ==
+
+= 1.0 = 
+* First version.
