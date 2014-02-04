@@ -31,5 +31,8 @@ That's correct and the way it should work. You like avatars more? Please modify 
 
 == Changelog ==
 
+= 1.1 =
+* minor bugfixes
+
 = 1.0 = 
 * First version.
