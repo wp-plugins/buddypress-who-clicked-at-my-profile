@@ -31,6 +31,9 @@ That's correct and the way it should work. You like avatars more? Please modify 
 
 == Changelog ==
 
+= 1.2 =
+* minor bugfixes (removed PHP Warning)
+
 = 1.1 =
 * minor bugfixes
 
