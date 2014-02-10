@@ -31,6 +31,9 @@ That's correct and the way it should work. You like avatars more? Please modify 
 
 == Changelog ==
 
+= 1.3 =
+* fixed bug (wrong username if user name contained spaces, using native buddypress userlink method now to create userlink)
+
 = 1.2 =
 * minor bugfixes (removed PHP Warning)
 

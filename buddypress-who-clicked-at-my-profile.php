@@ -3,7 +3,7 @@
  * Plugin Name: Buddypress - Who clicked at my Profile?
  * Plugin URI: http://ifs-net.de
  * Description: This Plugin provides at Widget that shows who visited your profile. This increases networking and communication at your community website!
- * Version: 1.2
+ * Version: 1.3
  * Author: Florian Schiessl
  * Author URI: http://ifs-net.de
  * License: GPL2
@@ -104,7 +104,7 @@ class BuddypressWCAMP_Widget_showMyVisitors extends WP_Widget {
                 foreach ($trackingList as $item) {
                     $userdata = get_userdata($item);
                     $data = $userdata->data;
-                    $resultLinks[] = '<a class="avatar" rel="user_' . $data->ID . '" href="/' . $bp->members->slug . '/' . $data->user_login . '">' . $data->user_login . '</a>';
+                    $resultLinks[] = str_replace('href=', 'class="avatar" rel="user_' . $data->ID . '" href=', bp_core_get_userlink($data->ID));
                 }
                 $content.=__('Your profile has been visited by:', 'buddypresswcamp') . ' ' . implode(', ', $resultLinks);
             }
