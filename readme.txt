@@ -25,9 +25,13 @@ Install, activate, and it will work.
 
 == Frequently Asked Questions ==
 
-= The last Visitors are only showed as text links =
+= You have questions? =
 
-That's correct and the way it should work. You like avatars more? Please modify the code of the widet as yu need it!
+Please use the plugins support forum
+
+== Screenshots ==
+
+1. screenshot-1.jpg
 
 == Changelog ==
 
