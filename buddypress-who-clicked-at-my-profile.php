@@ -3,7 +3,7 @@
  * Plugin Name: Buddypress - Who clicked at my Profile?
  * Plugin URI: http://ifs-net.de
  * Description: This Plugin provides at Widget that shows who visited your profile. This increases networking and communication at your community website!
- * Version: 1.4
+ * Version: 1.5
  * Author: Florian Schiessl
  * Author URI: http://ifs-net.de
  * License: GPL2
@@ -86,6 +86,7 @@ class BuddypressWCAMP_Widget_showMyVisitors extends WP_Widget {
 
         //Our variables from the widget settings.
         $title = apply_filters('widget_title', $instance['title']);
+        $showAvatars = apply_filters('widget_avatar', $instance['showAvatars']);
 
         echo $before_widget;
 
@@ -104,9 +105,18 @@ class BuddypressWCAMP_Widget_showMyVisitors extends WP_Widget {
                 foreach ($trackingList as $item) {
                     $userdata = get_userdata($item);
                     $data = $userdata->data;
-                    $resultLinks[] = str_replace('href=', 'class="avatar" rel="user_' . $data->ID . '" href=', bp_core_get_userlink($data->ID));
+                    $current_user = wp_get_current_user();
+                    if (($current_user->ID < 3) && ($showAvatars == 1)) {
+                        print '<a href="' . bp_core_get_userlink($data->ID, false, true) . '">' . bp_core_fetch_avatar(array('object' => 'user', 'item_id' => $data->ID));
+                    } else {
+                        $resultLinks[] = str_replace('href=', 'class="avatar" rel="user_' . $data->ID . '" href=', bp_core_get_userlink($data->ID));
+                    }
                 }
-                $content.=__('Your profile has been visited by:', 'buddypresswcamp') . ' ' . implode(', ', $resultLinks);
+                if ($showAvatars == 0) {
+                    $content.=__('Your profile has been visited by:', 'buddypresswcamp') . ' ' . implode(', ', $resultLinks);
+                } else {
+                    $content.='<br style="clear:both;">';
+                }
             }
         } else {
             $content.=__('Please log in to view the visitors of your profile', 'buddypresswcamp');
@@ -123,6 +133,7 @@ class BuddypressWCAMP_Widget_showMyVisitors extends WP_Widget {
 
         //Strip tags from title and name to remove HTML 
         $instance['title'] = strip_tags($new_instance['title']);
+        $instance['showAvatars'] = strip_tags($new_instance['showAvatars']);
 
         return $instance;
     }
@@ -130,14 +141,20 @@ class BuddypressWCAMP_Widget_showMyVisitors extends WP_Widget {
     function form($instance) {
 
         //Set up some default widget settings.
-        $defaults = array('title' => __('Last visitors of your profile', 'buddypresswcamp'));
+        $defaults = array(
+            'title' => __('Last visitors of your profile', 'buddypresswcamp'),
+            'showAvatars' => 0
+        );
         $instance = wp_parse_args((array) $instance, $defaults);
         ?>
         <p>
             <label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title', 'buddypresswcamp'); ?>:</label>
             <input id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" value="<?php echo $instance['title']; ?>" style="width:100%;" />
         </p>
-
+        <p>
+            <input type="checkbox" id="<?php echo $this->get_field_id('showAvatars'); ?>" name="<?php echo $this->get_field_name('showAvatars'); ?>" value="1" <?php if ($instance['showAvatars'] == 1) echo 'checked="checked" ' ?> />
+            <label for="<?php echo $this->get_field_id('showAvatars'); ?>"><?php _e('Show Avatars instead of links to last visitors profile pages', 'buddypresswcamp'); ?>:</label>
+        </p>
         <?php
     }
 

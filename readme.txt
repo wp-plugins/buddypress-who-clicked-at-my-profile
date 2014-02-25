@@ -31,6 +31,9 @@ That's correct and the way it should work. You like avatars more? Please modify 
 
 == Changelog ==
 
+= 1.5 =
+* new option for widget: You can now choose if avatars or only links to visiting users should be shown inside each widget
+
 = 1.4 =
 * minor bugfixes (removed PHP Warning)
 

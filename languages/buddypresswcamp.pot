@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-01-26 11:10+0100\n"
+"POT-Creation-Date: 2014-02-25 22:28+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,31 +17,35 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: buddypress-who-clicked-at-my-profile.php:75
+#: buddypress-who-clicked-at-my-profile.php:78
 msgid "Show visitors of my buddypress profile page"
 msgstr ""
 
-#: buddypress-who-clicked-at-my-profile.php:76
+#: buddypress-who-clicked-at-my-profile.php:79
 msgid "Show bp profile visitors"
 msgstr ""
 
-#: buddypress-who-clicked-at-my-profile.php:99
+#: buddypress-who-clicked-at-my-profile.php:103
 msgid ""
 "Your profile has not been visited yet by another member of the community."
 msgstr ""
 
-#: buddypress-who-clicked-at-my-profile.php:106
+#: buddypress-who-clicked-at-my-profile.php:116
 msgid "Your profile has been visited by:"
 msgstr ""
 
-#: buddypress-who-clicked-at-my-profile.php:109
+#: buddypress-who-clicked-at-my-profile.php:122
 msgid "Please log in to view the visitors of your profile"
 msgstr ""
 
-#: buddypress-who-clicked-at-my-profile.php:130
+#: buddypress-who-clicked-at-my-profile.php:145
 msgid "Last visitors of your profile"
 msgstr ""
 
-#: buddypress-who-clicked-at-my-profile.php:134
+#: buddypress-who-clicked-at-my-profile.php:151
 msgid "Title"
+msgstr ""
+
+#: buddypress-who-clicked-at-my-profile.php:156
+msgid "Show Avatars instead of links to last visitors profile pages"
 msgstr ""
