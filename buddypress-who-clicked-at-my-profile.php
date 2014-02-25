@@ -107,7 +107,7 @@ class BuddypressWCAMP_Widget_showMyVisitors extends WP_Widget {
                     $data = $userdata->data;
                     $current_user = wp_get_current_user();
                     if ($showAvatars == 1) {
-                        print '<a href="' . bp_core_get_userlink($data->ID, false, true) . '">' . bp_core_fetch_avatar(array('object' => 'user', 'item_id' => $data->ID));
+                        $content.= '<a href="' . bp_core_get_userlink($data->ID, false, true) . '">' . bp_core_fetch_avatar(array('object' => 'user', 'item_id' => $data->ID));
                     } else {
                         $resultLinks[] = str_replace('href=', 'class="avatar" rel="user_' . $data->ID . '" href=', bp_core_get_userlink($data->ID));
                     }
