@@ -35,6 +35,9 @@ Please use the plugins support forum
 
 == Changelog ==
 
+= 1.6 =
+* fixed minor bug
+
 = 1.5 =
 * new option for widget: You can now choose if avatars or only links to visiting users should be shown inside each widget
 
