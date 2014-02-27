@@ -18,6 +18,13 @@ This will only work with standard buddypress profile.
 
 Install, activate, and it will work.
 
+**More about me and my plugins**
+
+Since the year 1999 I do administration, customizing and programming for several forums, communities and social networks. In the year 2013 I switched from another PHP framework to Wordpress.
+Because not all plugins I'd like to have exist already I wrote some own plugins and I think I'll continue to do so.
+
+If you have the scope at forums or social networks my other modules might also be interesting for you. [Just take a look at my Wordpress Profile to see all my Plugins.](http://wordpress.org/plugins/search.php?q=quan_flo "ifs-net / quan_flo Wordpress Plugins") Use them and if my work helps you to save time, earn money or just makes you happy feel free to donate - Thanks. The donation link can be found at the right sidebar next to this text.
+
 == Installation ==
 
 1. Upload the files to the `/wp-content/plugins/buddypress-who-clicked-at-my-profile/` directory or install through WordPress directly.
