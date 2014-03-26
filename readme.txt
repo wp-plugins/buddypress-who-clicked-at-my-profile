@@ -42,6 +42,9 @@ Please use the plugins support forum
 
 == Changelog ==
 
+= 1.7 =
+* fixed minor bug (php notice removed)
+
 = 1.6 =
 * fixed minor bug
 
