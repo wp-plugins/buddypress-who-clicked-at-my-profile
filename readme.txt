@@ -3,7 +3,7 @@ Contributors: Florian Schießl
 Donate link: http://ifs-net.de/donate.php
 Tags: buddypress, profile, social network
 Requires at least: 3.0
-Tested up to: 3.9.1
+Tested up to: 3.9.2
 Stable Tag: trunk
 License: GPLv2
 License URI: http://www.opensource.org/licenses/GPL-2.0
@@ -41,6 +41,9 @@ Please use the plugins support forum
 1. screenshot-1.jpg
 
 == Changelog ==
+
+= 1.8 =
+* fixed html bug
 
 = 1.7 =
 * fixed minor bug (php notice removed)
