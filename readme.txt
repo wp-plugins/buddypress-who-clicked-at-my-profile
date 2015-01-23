@@ -3,7 +3,7 @@ Contributors: Florian Schießl
 Donate link: http://ifs-net.de/donate.php
 Tags: buddypress, profile, social network
 Requires at least: 3.0
-Tested up to: 3.9.2
+Tested up to: 4.1
 Stable Tag: trunk
 License: GPLv2
 License URI: http://www.opensource.org/licenses/GPL-2.0
@@ -41,6 +41,10 @@ Please use the plugins support forum
 1. screenshot-1.jpg
 
 == Changelog ==
+
+= 1.9 =
+* increased number of shown profile visits to 15 (need some customization? change the value of the $numberOfVisitsShown variable insider buddypress-who-.clicked-at-my-profile.php for your needs)
+* fixed minor bug (own profile might be shown as visitor, no more existend users that visited a profile before they got deleted might have caused little display errors in widget
 
 = 1.8 =
 * fixed html bug

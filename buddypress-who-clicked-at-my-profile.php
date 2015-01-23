@@ -3,7 +3,7 @@
  * Plugin Name: Buddypress - Who clicked at my Profile?
  * Plugin URI: http://ifs-net.de
  * Description: This Plugin provides at Widget that shows who visited your profile. This increases networking and communication at your community website!
- * Version: 1.8
+ * Version: 1.9
  * Author: Florian Schiessl
  * Author URI: http://ifs-net.de
  * License: GPL2
@@ -32,6 +32,7 @@ add_action('bp_before_member_header', 'buddypresswcamp_action');
  */
 function buddypresswcamp_action() {
     global $bp;
+    $numberOfVisitsShown = 10;
     $displayed_user_id = $bp->displayed_user->id;
     $current_user = wp_get_current_user();
     $viewing_user_id = $current_user->ID;
@@ -40,6 +41,7 @@ function buddypresswcamp_action() {
         // get user meta data (clickedme_tracking is a serialized array containing the last visits)
         $meta = get_user_meta($displayed_user_id, 'clickedme_tracking', true);
         $trackingList = unserialize($meta);
+        // there is no trackinglist yet? create one now...
         if (!is_array($trackingList)) {
             $trackingList = array();
         }
@@ -53,7 +55,7 @@ function buddypresswcamp_action() {
         $newTrackingList = array();
         $newTrackingList[] = $viewing_user_id;
         // we track ten visits maximum
-        if (count($trackingList) > 10) {
+        if (count($trackingList) > $numberOfVisitsShown) {
             array_pop($trackingList);
         }
         foreach ($trackingList as $item) {
@@ -103,13 +105,17 @@ class BuddypressWCAMP_Widget_showMyVisitors extends WP_Widget {
                 $content.=__('Your profile has not been visited yet by another member of the community.', 'buddypresswcamp');
             } else {
                 foreach ($trackingList as $item) {
-                    $userdata = get_userdata($item);
-                    $data = $userdata->data;
-                    $current_user = wp_get_current_user();
-                    if ($showAvatars == 1) {
-                        $content.= '<a href="' . bp_core_get_userlink($data->ID, false, true) . '">' . bp_core_fetch_avatar(array('object' => 'user', 'item_id' => $data->ID)).'</a>';
-                    } else {
-                        $resultLinks[] = str_replace('href=', 'class="avatar" rel="user_' . $data->ID . '" href=', bp_core_get_userlink($data->ID));
+                    if ($current_user->ID != $item) {
+                        $userdata = get_userdata($item);
+                        $data = $userdata->data;
+                        if ($data->ID > 0) {
+                            $current_user = wp_get_current_user();
+                            if ($showAvatars == 1) {
+                                $content.= '<a href="' . bp_core_get_userlink($data->ID, false, true) . '">' . bp_core_fetch_avatar(array('object' => 'user', 'item_id' => $data->ID)) . '</a>';
+                            } else {
+                                $resultLinks[] = str_replace('href=', 'class="avatar" rel="user_' . $data->ID . '" href=', bp_core_get_userlink($data->ID));
+                            }
+                        }
                     }
                 }
                 if ($showAvatars == 0) {
