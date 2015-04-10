@@ -3,7 +3,7 @@ Contributors: Florian Schießl
 Donate link: http://ifs-net.de/donate.php
 Tags: buddypress, profile, social network
 Requires at least: 3.0
-Tested up to: 4.1
+Tested up to: 4.1.1
 Stable Tag: trunk
 License: GPLv2
 License URI: http://www.opensource.org/licenses/GPL-2.0
@@ -32,6 +32,19 @@ If you have the scope at forums or social networks my other modules might also b
 
 == Frequently Asked Questions ==
 
+= Increase of change the number of visits that get tracked =
+
+You want to change the number of visits that should be tracked? Use the 'buddypress_wcamp_quantity' filter.
+
+Add the following code to your functions.php
+
+add_filter('buddypress_wcamp_quantity','my_buddypress_wcamp_quantity');
+function my_buddypress_wcamp_quantity() {
+    return 25;
+}
+
+This sets the value of users that get tracked to 25 for example.
+
 = You have questions? =
 
 Please use the plugins support forum
@@ -41,6 +54,9 @@ Please use the plugins support forum
 1. screenshot-1.jpg
 
 == Changelog ==
+
+= 2.0 =
+* Included filter "buddypress_wcamp_quantity" that lets you control the number of visits that should be tracked for each user. To use this filter see readme.txt file
 
 = 1.9 =
 * increased number of shown profile visits to 15 (need some customization? change the value of the $numberOfVisitsShown variable insider buddypress-who-.clicked-at-my-profile.php for your needs)
